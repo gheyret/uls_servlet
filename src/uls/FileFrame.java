@@ -61,7 +61,7 @@ public class FileFrame extends JFrame implements ActionListener{
     jLabel1.setText("File Name");
     jLabel1.setBounds(new Rectangle(6, 9, 55, 15));
     this.getContentPane().setLayout(null);
-    txtURL.setText("http://www.wetinim.org/");
+    txtURL.setText("http://www.xxxx.com/");
     txtURL.setBounds(new Rectangle(77, 8, 283, 21));
     txtURL.addActionListener(this);
     butStart.setBounds(new Rectangle(18, 66, 94, 25));
@@ -111,8 +111,8 @@ public class FileFrame extends JFrame implements ActionListener{
         url=htmlFile;
       }
 
-      System.setProperty("http.proxyHost", "126.100.100.12");
-      System.setProperty("http.proxyPort", "8080");
+      System.setProperty("http.proxyHost", "xxx.ddd.ccc.zzz");
+      System.setProperty("http.proxyPort", "9090");
 
       String conType=g_Uky_Kona.read(url);
 
@@ -126,12 +126,12 @@ public class FileFrame extends JFrame implements ActionListener{
 	newBuf=g_Uky_Kona.getContent();
       }
       // Hojjetke yazidu
-      FileOutputStream of=new FileOutputStream("D:/gheyret/wetinim.html");
+      FileOutputStream of=new FileOutputStream("D:/gheyret/mening.html");
       of.write(newBuf);
       of.close();
       Runtime rt=Runtime.getRuntime();
       try{
-        Process pr = rt.exec("rundll32 url.dll,FileProtocolHandler "+"D:/gheyret/wetinim.html");
+        Process pr = rt.exec("rundll32 url.dll,FileProtocolHandler "+"D:/gheyret/mening.html");
       }catch(Exception ee){
         ShowMessage("Browserde Korsitishte Xataliq Koruldi.\nXataliq Uchuri:\n"+ee.getMessage());
       }
